@@ -1,0 +1,1 @@
+drop database if exists kolokvij_vjezba_3;
