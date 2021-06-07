@@ -21,3 +21,7 @@ create table cura(
 	novcica decimal(15,8),
 	ogrlica int not null
 );
+
+alter table svekar add foreign key (cura) references cura(sifra);
+
+
