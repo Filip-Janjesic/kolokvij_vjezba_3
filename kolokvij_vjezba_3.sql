@@ -24,4 +24,25 @@ create table cura(
 
 alter table svekar add foreign key (cura) references cura(sifra);
 
+create table snasa(
+	sifra int not null primary key auto_increment,
+	introventno bit,
+	kuna decimal(15,6) not null,
+	euro decimal (12,9) not null,
+	treciput datetime,
+	ostavljena int not null
+);
+
+create table punica(
+	sifra int not null primary key auto_increment,
+	asocijalno bit,
+	kratkamajca varchar(44),
+	kuna decimal(13,8) not null,
+	vesta varchar(32) not null,
+	snasa int
+);
+
+alter table punica add foreign key (snasa) references snasa(sifra);
+
+
 
